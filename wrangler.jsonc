@@ -1,0 +1,8 @@
+{
+  // À MODIFIER pour chaque client : nom du site sur Cloudflare (minuscules, chiffres et tirets)
+  "name": "nom-du-site",
+  "compatibility_date": "2026-10-09",
+  "assets": {
+    "directory": "./public"
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- À MODIFIER : titre affiché dans l'onglet et dans Google -->
+  <title>Nom du restaurant – Restaurant de quartier à Ville</title>
+  <!-- À MODIFIER : description affichée dans Google (150 caractères environ) -->
+  <meta name="description" content="Nom du restaurant, restaurant de quartier à Ville : cuisine maison, produits de saison. Phrase de description à remplacer.">
+
+  <!-- À MODIFIER : adresse définitive du site (URL complète) -->
+  <link rel="canonical" href="https://www.example.com/">
+
+  <!-- À MODIFIER : aperçu lors d'un partage (Facebook, WhatsApp…) -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Nom du restaurant">
+  <meta property="og:title" content="Nom du restaurant – Restaurant de quartier à Ville">
+  <meta property="og:description" content="Cuisine maison et produits de saison. Phrase de description à remplacer.">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image" content="https://www.example.com/images/partage.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Photo du restaurant (à remplacer)">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="theme.css">
+
+  <!-- À MODIFIER : données structurées pour Google (mêmes infos que la page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Nom du restaurant",
+    "url": "https://www.example.com/",
+    "image": "https://www.example.com/images/partage.jpg",
+    "telephone": "+33000000000",
+    "email": "contact@example.com",
+    "servesCuisine": "Cuisine française",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 rue de l'Exemple",
+      "postalCode": "00000",
+      "addressLocality": "Ville",
+      "addressCountry": "FR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "12:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "19:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "14:30" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- 1. EN-TÊTE -->
+  <header class="entete">
+    <div class="conteneur">
+      <!-- À MODIFIER : nom du restaurant -->
+      <a class="entete__nom" href="#accueil">Nom du restaurant</a>
+      <!-- À MODIFIER : numéro au format international, sans espaces (ex. +33612345678) -->
+      <a class="bouton" href="tel:+33000000000">Appeler</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- 2. ACCUEIL -->
+    <section class="section accueil" id="accueil">
+      <div class="conteneur">
+        <div>
+          <!-- À MODIFIER : titre principal -->
+          <h1>Nom du restaurant</h1>
+          <!-- À MODIFIER : phrase d'accroche -->
+          <p class="accueil__accroche">Phrase d'accroche à remplacer : une cuisine maison, simple et généreuse, au cœur du quartier.</p>
+          <a class="bouton" href="#carte">Voir la carte</a>
+        </div>
+        <!-- À MODIFIER : image d'accueil (images/accueil.jpg) et sa description -->
+        <img src="images/accueil.jpg" alt="Salle du restaurant (image de remplacement)" width="1200" height="800" fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- 3. À PROPOS -->
+    <section class="section section--alt a-propos" id="a-propos">
+      <div class="conteneur">
+        <h2>À propos</h2>
+        <!-- À MODIFIER : présentation du restaurant -->
+        <p>Texte de présentation à remplacer. Racontez ici en quelques phrases l'histoire du restaurant, l'équipe, le style de cuisine et ce qui le rend unique dans le quartier.</p>
+      </div>
+    </section>
+
+    <!-- 4. LA CARTE -->
+    <section class="section carte" id="carte">
+      <div class="conteneur">
+        <h2>La carte</h2>
+        <div class="carte__groupes">
+
+          <div>
+            <h3>Entrées</h3>
+            <ul class="carte__liste">
+              <!-- À MODIFIER : nom, description, prix (dupliquer un <li> pour ajouter un plat) -->
+              <li class="carte__plat"><span class="carte__nom">Entrée n° 1</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+              <li class="carte__plat"><span class="carte__nom">Entrée n° 2</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+              <li class="carte__plat"><span class="carte__nom">Entrée n° 3</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Plats</h3>
+            <ul class="carte__liste">
+              <!-- À MODIFIER : nom, description, prix -->
+              <li class="carte__plat"><span class="carte__nom">Plat n° 1</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+              <li class="carte__plat"><span class="carte__nom">Plat n° 2</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+              <li class="carte__plat"><span class="carte__nom">Plat n° 3</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Desserts</h3>
+            <ul class="carte__liste">
+              <!-- À MODIFIER : nom, description, prix -->
+              <li class="carte__plat"><span class="carte__nom">Dessert n° 1</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+              <li class="carte__plat"><span class="carte__nom">Dessert n° 2</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Boissons</h3>
+            <ul class="carte__liste">
+              <!-- À MODIFIER : nom, description, prix -->
+              <li class="carte__plat"><span class="carte__nom">Boisson n° 1</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+              <li class="carte__plat"><span class="carte__nom">Boisson n° 2</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+              <li class="carte__plat"><span class="carte__nom">Boisson n° 3</span><span class="carte__prix">0,00 €</span><p class="carte__desc">Description courte à remplacer.</p></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HORAIRES -->
+    <section class="section section--alt horaires" id="horaires">
+      <div class="conteneur">
+        <h2>Horaires</h2>
+        <!-- À MODIFIER : horaires (penser à mettre à jour aussi le bloc JSON-LD en haut du fichier) -->
+        <table>
+          <caption class="visuellement-cache">Horaires d'ouverture</caption>
+          <tbody>
+            <tr><th scope="row">Lundi</th><td class="ferme">Fermé</td></tr>
+            <tr><th scope="row">Mardi</th><td>12h00 – 14h00<br>19h00 – 22h00</td></tr>
+            <tr><th scope="row">Mercredi</th><td>12h00 – 14h00<br>19h00 – 22h00</td></tr>
+            <tr><th scope="row">Jeudi</th><td>12h00 – 14h00<br>19h00 – 22h00</td></tr>
+            <tr><th scope="row">Vendredi</th><td>12h00 – 14h00<br>19h00 – 22h00</td></tr>
+            <tr><th scope="row">Samedi</th><td>12h00 – 14h00<br>19h00 – 22h00</td></tr>
+            <tr><th scope="row">Dimanche</th><td>12h00 – 14h30</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. GALERIE -->
+    <section class="section galerie" id="galerie">
+      <div class="conteneur">
+        <h2>Galerie</h2>
+        <!-- À MODIFIER : remplacer les fichiers images/galerie-1.jpg à galerie-6.jpg et décrire chaque photo dans alt -->
+        <ul class="galerie__grille">
+          <li><img src="images/galerie-1.jpg" alt="Photo 1 du restaurant (image de remplacement)" width="800" height="600" loading="lazy"></li>
+          <li><img src="images/galerie-2.jpg" alt="Photo 2 du restaurant (image de remplacement)" width="800" height="600" loading="lazy"></li>
+          <li><img src="images/galerie-3.jpg" alt="Photo 3 du restaurant (image de remplacement)" width="800" height="600" loading="lazy"></li>
+          <li><img src="images/galerie-4.jpg" alt="Photo 4 du restaurant (image de remplacement)" width="800" height="600" loading="lazy"></li>
+          <li><img src="images/galerie-5.jpg" alt="Photo 5 du restaurant (image de remplacement)" width="800" height="600" loading="lazy"></li>
+          <li><img src="images/galerie-6.jpg" alt="Photo 6 du restaurant (image de remplacement)" width="800" height="600" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 7. ACCÈS ET CONTACT -->
+    <section class="section section--alt contact" id="contact">
+      <div class="conteneur">
+        <h2>Accès et contact</h2>
+        <address>
+          <dl>
+            <dt>Adresse</dt>
+            <!-- À MODIFIER : adresse -->
+            <dd>1 rue de l'Exemple<br>00000 Ville</dd>
+            <dt>Téléphone</dt>
+            <!-- À MODIFIER : téléphone (lien au format international + texte affiché) -->
+            <dd><a href="tel:+33000000000">00 00 00 00 00</a></dd>
+            <dt>E-mail</dt>
+            <!-- À MODIFIER : adresse e-mail -->
+            <dd><a href="mailto:contact@example.com">contact@example.com</a></dd>
+          </dl>
+        </address>
+        <!-- À MODIFIER : remplacer la fin du lien par l'adresse du restaurant (espaces remplacés par +) -->
+        <a class="bouton" href="https://www.google.com/maps/search/?api=1&amp;query=1+rue+de+l%27Exemple+00000+Ville" rel="noopener" target="_blank">Itinéraire sur Google Maps</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 8. PIED DE PAGE -->
+  <footer class="pied">
+    <div class="conteneur">
+      <!-- À MODIFIER : nom du restaurant et année -->
+      <p>© 2026 Nom du restaurant · <a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+/* ==========================================================================
+   THÈME DU SITE — toute l'esthétique est ici.
+   Pour changer de style, modifiez d'abord les variables ci-dessous.
+   ========================================================================== */
+
+:root {
+  /* --- À MODIFIER : couleurs --- */
+  --couleur-principale: #7a3b2e;       /* boutons, titres, liens */
+  --couleur-principale-texte: #ffffff; /* texte posé sur la couleur principale */
+  --couleur-secondaire: #2f5d50;       /* prix, détails */
+  --couleur-fond: #fbf8f3;             /* fond de page */
+  --couleur-fond-alt: #f1ebe1;         /* fond des sections alternées */
+  --couleur-texte: #2a2522;            /* texte courant */
+  --couleur-texte-doux: #5c534c;       /* descriptions, mentions */
+  --couleur-bordure: #ddd3c5;
+
+  /* --- À MODIFIER : polices (polices système uniquement) --- */
+  --police-texte: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --police-titres: Georgia, "Times New Roman", Times, serif;
+  --taille-texte: 1.0625rem;           /* 17 px */
+  --interligne: 1.6;
+
+  /* --- À MODIFIER : arrondis --- */
+  --arrondi: 10px;
+  --arrondi-bouton: 999px;
+
+  /* --- À MODIFIER : espacements --- */
+  --espace-xs: 0.5rem;
+  --espace-s: 1rem;
+  --espace-m: 1.5rem;
+  --espace-l: 3rem;
+  --largeur-max: 60rem;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--couleur-fond);
+  color: var(--couleur-texte);
+  font-family: var(--police-texte);
+  font-size: var(--taille-texte);
+  line-height: var(--interligne);
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+h1, h2, h3 {
+  font-family: var(--police-titres);
+  line-height: 1.2;
+  margin: 0 0 var(--espace-s);
+}
+h1 { font-size: clamp(2rem, 7vw, 3.25rem); }
+h2 { font-size: clamp(1.6rem, 5vw, 2.25rem); color: var(--couleur-principale); }
+h3 { font-size: 1.3rem; margin-top: var(--espace-m); }
+
+p { margin: 0 0 var(--espace-s); }
+
+a { color: var(--couleur-principale); text-underline-offset: 0.15em; }
+a:focus-visible, .bouton:focus-visible {
+  outline: 3px solid var(--couleur-secondaire);
+  outline-offset: 3px;
+}
+
+.conteneur {
+  width: 100%;
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 0 var(--espace-s);
+}
+
+.lien-evitement {
+  position: absolute; left: -999px; top: 0;
+  background: var(--couleur-principale); color: var(--couleur-principale-texte);
+  padding: var(--espace-xs) var(--espace-s);
+}
+.lien-evitement:focus { left: 0; }
+
+.visuellement-cache {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- Bouton ---------- */
+.bouton {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border-radius: var(--arrondi-bouton);
+  background: var(--couleur-principale);
+  color: var(--couleur-principale-texte);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.bouton:hover { filter: brightness(1.1); }
+
+/* ---------- En-tête ---------- */
+.entete {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--couleur-fond);
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+.entete .conteneur {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--espace-s);
+  padding-top: var(--espace-xs); padding-bottom: var(--espace-xs);
+}
+.entete__nom {
+  font-family: var(--police-titres);
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--couleur-texte); text-decoration: none;
+  min-width: 0; overflow-wrap: anywhere;
+}
+
+/* ---------- Sections ---------- */
+.section { padding: var(--espace-l) 0; }
+.section--alt { background: var(--couleur-fond-alt); }
+section[id] { scroll-margin-top: 4rem; }
+
+/* Accueil */
+.accueil .conteneur { display: grid; gap: var(--espace-m); align-items: center; }
+.accueil__accroche { font-size: 1.2rem; color: var(--couleur-texte-doux); }
+.accueil img { border-radius: var(--arrondi); width: 100%; }
+
+/* À propos */
+.a-propos p { max-width: 42rem; }
+
+/* Carte */
+.carte__liste { list-style: none; margin: 0; padding: 0; }
+.carte__plat {
+  display: grid; grid-template-columns: 1fr auto; column-gap: var(--espace-s);
+  padding: var(--espace-xs) 0;
+  border-bottom: 1px dashed var(--couleur-bordure);
+}
+.carte__nom { font-weight: 600; }
+.carte__prix { font-weight: 700; color: var(--couleur-secondaire); white-space: nowrap; }
+.carte__desc { grid-column: 1 / -1; margin: 0; color: var(--couleur-texte-doux); font-size: 0.95em; }
+.carte__groupes { display: grid; gap: 0 var(--espace-l); }
+
+/* Horaires */
+.horaires table { width: 100%; max-width: 30rem; border-collapse: collapse; }
+.horaires th, .horaires td {
+  text-align: left; padding: var(--espace-xs) 0;
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+.horaires th { font-weight: 600; padding-right: var(--espace-s); }
+.horaires .ferme { color: var(--couleur-texte-doux); font-style: italic; }
+
+/* Galerie */
+.galerie__grille {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--espace-xs);
+}
+.galerie__grille img {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: var(--arrondi);
+}
+
+/* Accès et contact */
+.contact address { font-style: normal; }
+.contact dl { margin: 0 0 var(--espace-m); }
+.contact dt { font-weight: 600; margin-top: var(--espace-s); }
+.contact dd { margin: 0; overflow-wrap: anywhere; }
+
+/* Pied de page */
+.pied {
+  padding: var(--espace-m) 0;
+  background: var(--couleur-texte); color: var(--couleur-fond);
+  font-size: 0.9rem;
+}
+.pied a { color: var(--couleur-fond); }
+.pied p { margin: 0; }
+
+/* Page mentions légales */
+.mentions h2 { font-size: 1.3rem; margin-top: var(--espace-m); }
+.mentions dl { margin: 0; }
+.mentions dt { font-weight: 600; margin-top: var(--espace-xs); }
+.mentions dd { margin: 0; overflow-wrap: anywhere; }
+
+/* ---------- Tablette ---------- */
+@media (min-width: 40rem) {
+  .galerie__grille { grid-template-columns: repeat(3, 1fr); }
+  .carte__groupes { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Ordinateur ---------- */
+@media (min-width: 60rem) {
+  :root { --espace-l: 4.5rem; }
+  .accueil .conteneur { grid-template-columns: 1fr 1fr; }
+}
